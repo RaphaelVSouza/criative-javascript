@@ -1,0 +1,14 @@
+{
+  "name": "criative-javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Raphael V. <raphael@think4.com.br>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn canvas-sketch sketch-01.js --output=output/01"
+  },
+  "dependencies": {
+    "canvas-sketch": "^0.7.4",
+    "canvas-sketch-cli": "^1.11.14"
+  }
+}
