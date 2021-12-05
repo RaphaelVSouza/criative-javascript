@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U1 - Fundamentals</title>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+        let canvas = document.querySelector('#canvas');
+        let ctx = canvas.getContext('2d');
+        // ctx.fillStyle = 'blue';
+        // ctx.fillRect(100, 100, 400, 400);
+
+        // ctx.lineWidth = 4;
+        // ctx.beginPath();
+        // ctx.rect(100, 100, 400, 400);
+        // ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.arc(300, 300, 100, 0, Math.PI * 2);
+        // ctx.stroke();
+
+        const width = 60;
+        const height = 60;
+        const gap = 20;
+
+        for(let i = 0; i < 5; i++) {
+            for(let j = 0; j < 5; j++) { 
+                let x = 100 + (width + gap) * i;
+                let y = 100 + (height + gap) * j;
+
+                ctx.beginPath();
+                ctx.rect(x, y, width, height);
+                ctx.stroke();
+
+                if(Math.random() > 0.5) {
+                    ctx.beginPath();
+                    ctx.rect(x + 8, y + 8, width - 16, height - 16);
+                    ctx.stroke();
+                }
+                
+            }
+            
+        }
+
+        let year = 2042;
+        let nextYear = year + 1;
+
+        let dinner = 'salad';
+        let sentence = 'I ate a ' + dinner + ' for lunch';
+
+        function saySomething(something) {
+        console.log(something);
+        }
+
+        saySomething('Hello');
+
+        function add(a, b) {
+        return a + b;
+        }
+
+        let result = add(1, 2);
+        console.log(result);
+
+        let multiply = (a, b) => {
+        return a * b;
+        }
+
+        console.log(multiply(2, 3));
+
+        let years = [];
+        let menu = ['starter', 'main', 'dessert', 'drinks'];
+
+        for(let i = 0; i < menu.length; i++) {
+            console.log(menu[i]);
+        }
+
+        for(let i = 0; i < 10; i++) {
+            years.push(year + i);
+            
+        }
+
+        console.log(years);
+
+        const gravity = 9.81;
+        let velocity = 0.0;
+
+    </script>
+</body>
+</html>
